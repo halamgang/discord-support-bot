@@ -60,7 +60,4 @@ async def on_message(message):
             await message.add_reaction('❌')
 
 def run():
-    client.run('MTA4Mzc4NjI1NTM5NDk0MzA3Ng.GnxXBV.MjS1RXthKuasrG9ijD8SWPtSqM3Jcgq-Hfy0rw')
-
-if __name__ == '__main__':
-    run()
+    client.run("MTA4NDMxNDQxNjQzNjIzNjMzOQ.G0M0o5._nSAP6KLWx1Fxph9cz5E4bVBl8R13q_uoEfQQY")
