@@ -1,8 +1,16 @@
 import os
 import discord
+from cmath import log
+from distutils.sysconfig import PREFIX
+import discord
+from dotenv import load_dotenv
+load_dotenv()
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
+
+PREFIX = os.environ['PREFIX']
+TOKEN = os.environ['TOKEN']
 
 SUPPORT_CATEGORY_NAME = "support"  # 변경 가능
 
@@ -58,5 +66,7 @@ async def on_message(message):
         else:
             await message.add_reaction('❌')
 
-def run():
-    client.run(os.environ['TOKEN'])
+try:
+    client.run(TOKEN)
+except discord.errors.LoginFailure as e:
+    print("Improper token has been passed.")
