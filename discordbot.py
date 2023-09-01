@@ -18,10 +18,10 @@ async def on_message(message):
         support_category = discord.utils.get(message.guild.categories, name=SUPPORT_CATEGORY_NAME)
 
         if support_category is None:
-            await message.channel.send(f"카테고리 '{SUPPORT_CATEGORY_NAME}'을(를) 찾을 수 없습니다.")
+            await message.channel.send(f"카테고리 '{SUPPORT_CATEGORY_NAME}'을(를) 찾을 수 없습니다.") # 카테고리 찾기
             return
 
-        support_role = discord.utils.get(message.guild.roles, name=support_role_name)
+        support_role = discord.utils.get(message.guild.roles, name=support_role_name) # 직업찾기
 
         if support_role is None:
             await message.channel.send(f"역할 '{support_role_name}'을(를) 찾을 수 없습니다.")
@@ -60,4 +60,4 @@ async def on_message(message):
             await message.add_reaction('❌')
 
 def run():
-    client.run("MTA4NDMxNDQxNjQzNjIzNjMzOQ.G0M0o5._nSAP6KLWx1Fxph9cz5E4bVBl8R13q_uoEfQQY")
+    client.run(디스코드 봇 토큰)
